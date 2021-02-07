@@ -6,5 +6,6 @@ const PORT = process.env.PORT || 5000
 
 app
   .use(express.static(path.join(__dirname, "public")))
-  .get('/', (req, res) => res.send(`<iframe src="http://docs.google.com/gview?url=http://kurakula.tech/files/Resume.docx&embedded=true"></iframe>`))
+  .get('/', (req, res) => res.send(`<iframe src="https://docs.google.com/gview?url=http://kurakula.tech/Resume.docx&embedded=true" frameborder="0">
+  </iframe>`))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
